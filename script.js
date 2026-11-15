@@ -45,3 +45,20 @@ forma.addEventListener("submit", (event) => {
   forma.reset();
 });
 
+const prekidac = document.getElementById("nav-toggle");
+const meni = document.getElementById("nav-links");
+
+function postaviMeni(otvoren) {
+  meni.classList.toggle("open", otvoren);
+  prekidac.setAttribute("aria-expanded", String(otvoren));
+  prekidac.setAttribute("aria-label", otvoren ? "Zatvori meni" : "Otvori meni");
+}
+
+prekidac.addEventListener("click", () => {
+  postaviMeni(!meni.classList.contains("open"));
+});
+
+meni.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => postaviMeni(false));
+});
+
