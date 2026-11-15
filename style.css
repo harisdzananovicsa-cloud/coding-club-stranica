@@ -112,3 +112,146 @@ a {
   color: var(--white);
 }
 
+.hero {
+  padding: 5rem 0 4.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-dark);
+}
+
+.btn-ghost {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.btn-ghost:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+.editor {
+  background: var(--ink);
+  color: #E8ECFA;
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 0 var(--sun);
+  overflow: hidden;
+}
+
+.editor-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1rem;
+  background: #242E52;
+  font-family: var(--font-code);
+  font-size: 0.8rem;
+}
+
+.editor-bar i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #5B6585;
+}
+
+.editor-bar span {
+  margin-left: 0.6rem;
+  color: #AAB4D6;
+}
+
+.editor-code {
+  padding: 1.3rem 1.4rem 1.6rem;
+  font-family: var(--font-code);
+  font-size: 0.92rem;
+  line-height: 1.75;
+  overflow-x: auto;
+}
+
+.editor-code .l {
+  display: block;
+  white-space: pre;
+  opacity: 0;
+  animation: line-in 0.01s forwards;
+  animation-delay: calc(var(--i) * 0.45s);
+}
+
+.editor-code .k { color: #8FB0FF; }
+.editor-code .s { color: #7FE0C3; }
+.editor-code .p { color: var(--sun); }
+
+.cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.1em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--sun);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes line-in {
+  to { opacity: 1; }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editor-code .l {
+    opacity: 1;
+    animation: none;
+  }
+
+  .cursor {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
