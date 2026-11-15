@@ -9,3 +9,4 @@ Projektni zadatak iz predmeta Softversko inženjerstvo (4. razred gimnazije, IT 
 ## O projektu
 
 Prezentacijska web stranica školskog kluba za programiranje i tehnologiju. Stranica predstavlja klub, članove i projekte te ima formu za prijavu novih članova.
+
