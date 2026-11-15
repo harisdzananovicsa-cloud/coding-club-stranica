@@ -401,3 +401,67 @@ a {
   font-size: 0.78rem;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.form {
+  display: grid;
+  gap: 1.2rem;
+  padding: 2rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid var(--line);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--blue);
+}
+
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea {
+  border-color: var(--error);
+}
+
+.error {
+  display: block;
+  min-height: 1.3em;
+  margin-top: 0.3rem;
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.form .btn {
+  justify-self: start;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--mint);
+  font-weight: 600;
+}
+
