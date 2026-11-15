@@ -465,3 +465,39 @@ a {
   font-weight: 600;
 }
 
+@media (max-width: 900px) {
+  .hero-grid,
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .members {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .editor {
+    box-shadow: 6px 6px 0 var(--sun);
+  }
+
+  .form {
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .members {
+    grid-template-columns: 1fr;
+  }
+}
+
