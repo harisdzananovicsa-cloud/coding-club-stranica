@@ -255,3 +255,59 @@ a {
   }
 }
 
+.section {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: var(--white);
+  border-block: 1px solid var(--line);
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.section-intro {
+  color: var(--muted);
+  max-width: 60ch;
+  margin-top: 0;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+
+.about-grid p {
+  margin: 0;
+  font-size: 1.15rem;
+  max-width: 60ch;
+}
+
+.facts {
+  display: grid;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.facts li {
+  padding-left: 1.1rem;
+  border-left: 4px solid var(--blue);
+}
+
+.facts strong {
+  display: block;
+  font-family: var(--font-head);
+}
+
