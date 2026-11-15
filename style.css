@@ -352,3 +352,52 @@ a {
 .member:nth-child(2) .avatar { background: #BFD0FF; }
 .member:nth-child(3) .avatar { background: #B7ECDD; }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 6px solid var(--blue);
+  border-radius: var(--radius);
+}
+
+.project:nth-child(2) { border-top-color: var(--sun); }
+.project:nth-child(3) { border-top-color: var(--mint); }
+.project:nth-child(4) { border-top-color: var(--ink); }
+
+.project h3 {
+  font-size: 1.25rem;
+}
+
+.project p {
+  flex: 1;
+  margin: 0 0 1rem;
+  color: var(--muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li {
+  padding: 0.2rem 0.6rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-family: var(--font-code);
+  font-size: 0.78rem;
+}
+
